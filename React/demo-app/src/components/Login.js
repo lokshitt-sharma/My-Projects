@@ -1,6 +1,6 @@
 import React from "react";
-import  '../css/style.css' ; 
-import img from '../img/bg.jpg'
+import  '../css/form_style.css' ; 
+import img from '../img/bg.jpg' ; 
 
 export default function Login() {
   return (
@@ -9,13 +9,13 @@ export default function Login() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-6 text-center mb-5">
-              <h2 className="heading-section">Sign In</h2>
+              <h2 className="heading-section">Welcome!!</h2>
             </div>
           </div>
           <div className="row justify-content-center">
             <div className="col-md-7 col-lg-5">
               <div className="login-wrap p-4 p-md-5">                
-                <img   className="img" src={img}></img>
+                <img   className="img" src={img} alt = ""></img>
                 <h3 className="text-center mb-4">Please login !!</h3>
                 <form action="#" className="signup-form">
                   <div className="form-group mb-3">
@@ -46,7 +46,7 @@ export default function Login() {
                   <div className="form-group">
                     <button
                       type="submit"
-                      className="form-control btn btn-primary submit px-3"
+                      className="form-control btn btn-primary submit px-3" href = "#"
                     >
                       Sign In
                     </button>
