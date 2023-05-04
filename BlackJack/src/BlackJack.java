@@ -20,10 +20,10 @@ public class BlackJack{
 	private static void gameLogic(int sumOfPlayer ,  int sumOfDealer , Scanner sc , Player newPlayer  , Dealer dealer)
 	{
 		if(validateIfBlackJack(sumOfPlayer) || (sumOfDealer > 17 ))
-			System.out.println("Congratulations " + newPlayer.getPlayerName() +" BlackJack !!");	
+			System.out.println(Constants.CONGRATULATIONS + newPlayer.getPlayerName() +Constants.BLACKJACK);	
 		
 		else if (validateIfBusted(sumOfPlayer))
-			System.out.println("Busted your lose !!");
+			System.out.println(Constants.BUSTED);
 		
 		while(true) {
 			int cardCount  = 2 ; 
@@ -43,11 +43,11 @@ public class BlackJack{
 
 					if(validateIfBusted(sumOfPlayer))
 					{
-						System.out.println("Busted your lose !!");
+						System.out.println(Constants.BUSTED);
 						break ; 
 					}
 					else if (validateIfBlackJack(sumOfPlayer) || sumOfDealer > 17) {
-						System.out.println("Congratulations " + newPlayer.getPlayerName() +" BlackJack !!");		
+						System.out.println(Constants.CONGRATULATIONS + newPlayer.getPlayerName() +Constants.WIN);		
 						break ; 
 					}
 					
@@ -58,18 +58,18 @@ public class BlackJack{
 					
 					if(sumOfPlayer > sumOfDealer)
 					{
-						System.out.println("Congrats " + newPlayer.getPlayerName()+" u Win !!");
+						System.out.println(Constants.CONGRATULATIONS + newPlayer.getPlayerName()+Constants.WIN);
 					}
 					else if(sumOfPlayer == sumOfDealer){
-						System.out.println("Tie !!");
+						System.out.println(Constants.TIE);
 					}else
 					{
-						System.out.println("You Lose !!") ;
+						System.out.println(Constants.LOSE) ;
 					}
 					break ; 
 					
 				}else {
-					System.out.println("Invalid input");
+					System.out.println(Constants.INVALID);
 				}
 
 			}
